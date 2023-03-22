@@ -1,0 +1,77 @@
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.form label {
+	margin-right: 10px;
+}
+
+.form input[type="text"] {
+	flex-grow: 1;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.form button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #428bca;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.questions h2 {
+	margin-bottom: 10px;
+}
+
+.question {
+	background-color: #f5f5f5;
+	padding: 20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.question .title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.question .content {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.question .actions {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.question .actions button {
+	margin-left: 10px;
+	padding: 5px 10px;
+	font-size: 14px;
+	background-color: #428bca;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.question .actions button:hover {
+	background-color: #3071a9;
+}
