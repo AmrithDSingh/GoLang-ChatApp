@@ -1,7 +1,31 @@
+.sample-header {
+	position: fixed;
+	left: auto;
+	top: 0;
+	width: 50%;
+	height: 150px; /* Changed to a smaller height */
+	background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.sample-header h2 {
+	color: white; /* Changed the text color to white */
+	padding-top: 50px; /* Added padding to move the text down */
+}
+
+.questions h2 {
+	margin-top: 20px; /* Moved the Questions heading below the image */
+	color: black; /* Changed the text color to black */
+}
+
+/* Rest of the CSS remains the same */
 .container {
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 50px;
+	
 }
 
 .form {
@@ -31,10 +55,6 @@
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-}
-
-.questions h2 {
-	margin-bottom: 10px;
 }
 
 .question {
@@ -73,5 +93,5 @@
 }
 
 .question .actions button:hover {
-	background-color: #3071a9;
+	background-color: #808080;
 }
