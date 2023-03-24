@@ -1,29 +1,62 @@
-.container {
+.sample-header {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0;
+	width: 50%;
+	height: 150px;
+	background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+	
+	.sample-header h2 {
+	color: white;
+	padding-top: 50px;
+	text-align: center;
+	}
+	
+	.questions h2 {
+	margin-top: 20px;
+	color: black;
+	text-align: center;
+	}
+	
+	.container {
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 20px;
-}
-
-.form {
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+	
+	.form {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	margin-bottom: 20px;
-}
-
-.form label {
+	}
+	
+	.form label {
 	margin-right: 10px;
-}
-
-.form input[type="text"] {
+	}
+	
+	.form input[type="text"] {
 	flex-grow: 1;
 	padding: 10px;
 	font-size: 16px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-}
-
-.form button {
+	}
+	
+	.form button {
 	padding: 10px 20px;
 	font-size: 16px;
 	background-color: #428bca;
@@ -31,18 +64,15 @@
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-}
-
-.questions h2 {
-	margin-bottom: 10px;
-}
-
-.question {
+	}
+	
+	.question {
 	background-color: #f5f5f5;
 	padding: 20px;
 	border-radius: 5px;
 	margin-bottom: 20px;
-}
+	width: 100%;
+	}
 
 .question .title {
 	font-size: 18px;
@@ -73,5 +103,5 @@
 }
 
 .question .actions button:hover {
-	background-color: #3071a9;
+	background-color: #808080;
 }
