@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>User Profile</title>
+	<link rel="stylesheet" href="/static/please.css">
+</head>
+<body>
+	<h1>User Profile</h1>
+
+	<!-- Use JavaScript to retrieve the query parameters from the URL -->
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const name = urlParams.get('name');
+		const email = urlParams.get('email');
+		const profilePic = urlParams.get('profile-pic');
+
+		// Set the text content and image source of the page elements to the retrieved values
+		document.getElementById('name').textContent = name;
+		document.getElementById('email').textContent = email;
+		document.getElementById('profile-pic').src = profilePic;
+	</script>
+
+	<!-- Display the user's information -->
+	<p>Name: <span id="name"></span></p>
+	<p>Email: <span id="email"></span></p>
+	<p>Profile Picture:</p>
+	<img id="profile-pic" src="" alt="Profile Picture">
+</body>
+</html>
