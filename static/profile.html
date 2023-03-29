@@ -3,33 +3,53 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Q&A Platform</title>
-	<link rel="stylesheet" href="/static/please.css">
+	<link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-	<a href="/static/let-us-see.html">Home</a>
-	<form action="update_profile.php" method="post" enctype="multipart/form-data">
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name"><br><br>
-
-		<label for="email">Email:</label>
-		<input type="email" id="email" name="email"><br><br>
-
-		<label for="profile-pic">Profile Picture:</label>
-		<input type="file" id="profile-pic" name="profile-pic"><br><br>
-
-		<input type="submit" value="Update" onclick="submitForm()">
-	</form>
+	<a id ="home"href="/static/let-us-see.html">Home</a>
+		<div class="user">
+			<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+<button type="button" class="toggle-btn" onclick="logIn()">Log In</button>
+<button type="button" class="toggle-btn" onclick="register()">register</button>
+			</div>
+<form id="logIn" class="input-group">
+	<input type="text" class="input-field" placeholder="User Name" required>
+	<input type="text" class="input-field" placeholder="Password" required>
+	<input type="checkbox" class="check-box"><span>Remember Password</span>
+<button type="submit" class="submit-btn">Log In</button>
+	
+</form>
+<form id="register" class="input-group">
+	<input type="email" class="input-field" placeholder="Email" required>
+	<input type="text" class="input-field" placeholder="User Name" required>
+	<input type="text" class="input-field" placeholder="Password" required>
+	<input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+<button type="submit" class="submit-btn">Register</button>
+	
+</form>
+		</div>
+	</div>
+	
 
 	<script>
-        function submitForm() {
-            // Get the values of the input fields
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const profilePic = document.getElementById("profile-pic").value;
-    
-            // Redirect to the new page with the inputted values as query parameters
-            window.location.href = "/static/user_profile.html?" + "name=" + name + "&email=" + email + "&profile-pic=" + profilePic;
-        }
+       var x = document.getElementById("logIn")
+	   
+       var y = document.getElementById("register")
+
+	   
+       var z = document.getElementById("btn")
+	   function register(){
+		x.style.left = "-400px";
+		y.style.left = "50px";
+		z.style.left = "110px";
+	   }
+	   function logIn(){
+		x.style.left = "50px";
+		y.style.left = "450px";
+		z.style.left = "0px";
+	   }
     </script>
     
 </body>
