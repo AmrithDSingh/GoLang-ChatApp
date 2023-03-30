@@ -20,13 +20,13 @@ function renderQuestions() {
     const answerForm = document.createElement('form');
     const answerInput = document.createElement('input');
     const answerButton = document.createElement('button');
-    
+
     title.innerText = question.title;
     content.innerText = question.content;
     answerInput.setAttribute('type', 'text');
     answerInput.setAttribute('placeholder', 'Type your answer here:');
     answerButton.innerText = 'Submit';
-    
+
     answerForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const answer = answerInput.value.trim();
@@ -43,49 +43,48 @@ function renderQuestions() {
 
     listItem.appendChild(title);
     listItem.appendChild(content);
-    
+
     const answerList = document.createElement('ul');
     answerList.setAttribute('class', 'answer-list');
-    
+
     question.answers.forEach((answer) => {
       const answerItem = document.createElement('li');
       const answerContent = document.createElement('p');
       const voteForm = document.createElement('form');
       const voteButton = document.createElement('button');
       const voteCount = document.createElement('span');
-      
+
       answerContent.innerText = answer.content;
       voteButton.innerText = 'Vote';
       voteCount.innerText = answer.votes.toString();
-      
+
       voteForm.addEventListener('submit', (event) => {
         event.preventDefault();
         answer.votes += 1;
         voteCount.innerText = answer.votes.toString();
       });
-      
+
       voteForm.appendChild(voteButton);
       voteForm.appendChild(voteCount);
       answerItem.appendChild(answerContent);
       answerItem.appendChild(voteForm);
       answerList.appendChild(answerItem);
     });
-    
+
     listItem.appendChild(answerList);
     listItem.appendChild(answerForm);
     answerForm.appendChild(answerInput);
     answerForm.appendChild(answerButton);
-    
+
     questionList.appendChild(listItem);
   });
 }
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+// Function to add a new question to the questions array
+function addQuestion() {
   const input = document.querySelector('#question');
   const title = input.value.trim();
   if (title) {
-    // Add the new question to the questions array
     const question = {
       id: Date.now(),
       title,
@@ -94,12 +93,14 @@ form.addEventListener('submit', (event) => {
       answers: []
     };
     questions.push(question);
-    // Clear the input field
     input.value = '';
-    // Rerender the list of questions
     renderQuestions();
   }
-});
+}
+
+// Add event listener to submit button to add new question
+const submitButton = document.querySelector('#submit');
+submitButton.addEventListener('click', addQuestion);
 
 // Get profile data from local storage, or create an empty object if none exists
 let profileData = JSON.parse(localStorage.getItem('profileData')) || {};
@@ -110,4 +111,3 @@ const profileNameInput = document.querySelector('#name');
 const profileEmailInput = document.querySelector('#email');
 const profilePicInput = document.querySelector('#profile-pic');
 const profilePicPreview = document.querySelector('.profile-pic');
-
