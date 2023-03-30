@@ -3,28 +3,61 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Q&A Platform</title>
-	<link rel="stylesheet" href="/static/please.css">
 </head>
 <body>
- <a href="/static/profile.html">Profile</a>
-	<div class="sample-header">
-		<div class="sample-header-section">
-		  
+
+
+
 		  <h2> welcome </h2>
-		</div>
-	<div class="container">
+		<div id="header">
+			<a href="/static/profile.html" ><img src="https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="profile image, outline of person" height="50px" width="50px"></a>
 		<h1>Q&A Platform</h1>
-		<div class="form">
 			<label for="question">Ask a question:</label>
 			<input type="text" id="question" placeholder="Type your question here:">
-			<button id="submit">Submit</button>
-		</div>
-		<div class="questions">
-			<h2>Questions</h2>
-			<ul id="question-list">
-			</ul>
-		</div>
-	</div>
-	<script src="is-there-a-god.js"></script>
+			<button onclick="myFunction()" id="submit">Submit</button>
+		</div> <br> <br> <br> <br> <br> <br>
+ 
+		<h1>Questions</h1>
+			<h2 id="message"></h2>
+			<br><br>
+<br><br>
+			<label for="answer">Answers:</label>
+			<input type="text" id="answer" placeholder="Have a answer?">
+			<button onclick="functionTwo()" id="submit">Submit</button>
+			<br><br>
+<br>
+<h2 id="messageTwo"></h2>
+		<style>#header {
+			color: white;
+			text-align: center;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://cdn.wallpapersafari.com/26/2/cMsvkH.jpg);
+			background-size: cover;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+			padding: 20px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+		  }
+		body{ background-color: white;}
+		#question{ color: black;}
+		#message{color: black;}
+		
+	        </style>
+			
+			<script>
+				function myFunction(){
+					let question = document.querySelector("#question");
+					let message = document.querySelector("#message");
+					message.innerHTML =  question.value;
+				}
+				function functionTwo(){
+					let answer = document.querySelector("#ans");
+					let ans = document.querySelector("#answer");
+					messageTwo.innerHTML = ans.value;
+				}
+			</script>
+
 </body>
 </html>
